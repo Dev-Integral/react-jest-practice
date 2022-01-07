@@ -19,5 +19,8 @@
   "jest": {
     "verbose": true,
     "testURL": "http://localhost:1234/"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
   }
 }
