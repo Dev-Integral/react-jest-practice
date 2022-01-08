@@ -1,4 +1,4 @@
-import {Total, numberWithComma, functions} from './App'
+import {Total, numberWithComma, functions, reverseString} from './App'
 
 // This is a unit test;
 test('Addition of two  numbers', ()=>{
@@ -64,3 +64,34 @@ test('Admin should be in usernames', () => {
     const usernames = ['Taiwo', 'Kehinde', 'Admin'];
     expect(usernames).toContain('Admin');
 });
+
+// working with Async data
+
+// Promise
+test('User fetched name should be Leanne Graham', ()=>{
+    // expect.assertions(2);
+    // return functions.fetchUser().then(res =>{
+    //     expect(res.username).toEqual('Bret');
+    //     expect(res.name).toEqual('Leanne Graham');
+    // });
+});
+
+// Async Await
+test('User fetched name should be Leanne Graham', async()=>{
+    // expect.assertions(2);
+    // const data =await functions.fetchUser();
+    //     expect(data.username).toEqual('Bret');
+    //     expect(data.name).toEqual('Leanne Graham');
+});
+
+test('reverseString fxn exist', ()=>{
+    expect(reverseString).toBeDefined();
+});
+
+test('String Reverses', ()=>{
+    expect(reverseString('hello')).toBe('olleh');
+});
+
+test('String reverses with uppercase', ()=>{
+    expect(reverseString('Hello')).toBe('olleh');
+})
