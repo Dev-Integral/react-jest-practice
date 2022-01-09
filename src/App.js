@@ -33,8 +33,8 @@ export const chunkArray =(arr, len)=>{
         if(!last || last.length === len){
             chunkedArr.push([val]);
         }else{
-            last.push([val]);
+            last.push(val);
         }
-        return chunkedArr;
     });
+    return chunkedArr;
 }

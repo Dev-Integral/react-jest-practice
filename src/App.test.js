@@ -1,4 +1,4 @@
-import {Total, numberWithComma, functions, reverseString} from './App'
+import {Total, numberWithComma, functions, reverseString, chunkArray} from './App'
 
 // This is a unit test;
 test('Addition of two  numbers', ()=>{
@@ -94,4 +94,14 @@ test('String Reverses', ()=>{
 
 test('String reverses with uppercase', ()=>{
     expect(reverseString('Hello')).toBe('olleh');
+}); 
+
+test('chunkArray fxn exist', ()=>{
+    expect(chunkArray).toBeDefined();
+});
+
+test('Chunk an array of 10 values with the length of 2', ()=>{
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+    const len = 2;
+    expect(chunkArray(numbers, len)).toEqual([[1,2],[3,4],[5,6],[7,8],[9,10]]);
 })
